@@ -1,0 +1,4 @@
+node_modules
+dist
+apps/server/lla.db
+.vite
