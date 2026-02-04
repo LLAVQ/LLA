@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch Room</title>
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="room">
+      <div class="room-header">
+        <div>
+          <h1>Watch Room</h1>
+          <p id="role-indicator" class="subtitle"></p>
+        </div>
+        <button id="copy-link" class="secondary">Copy invite link</button>
+      </div>
+      <div class="player-shell">
+        <video
+          id="video-player"
+          class="video-js vjs-default-skin"
+          controls
+          preload="auto"
+          data-setup='{}'
+        ></video>
+      </div>
+      <div class="status-row">
+        <span id="sync-status">Connecting…</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+  <script src="/room.js"></script>
+</body>
+</html>

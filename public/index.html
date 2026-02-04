@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sync Watch Party</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>Sync Watch Party</h1>
+      <p class="subtitle">Upload a video and invite one friend to watch together.</p>
+      <form id="upload-form" class="form">
+        <label class="field">
+          <span>Video file (MP4/WebM)</span>
+          <input type="file" name="videoFile" accept="video/mp4,video/webm" />
+        </label>
+        <label class="field">
+          <span>Or video URL (optional)</span>
+          <input type="url" name="videoUrl" placeholder="https://example.com/video.mp4" />
+        </label>
+        <label class="field">
+          <span>Art / Poster image</span>
+          <input type="file" name="artFile" accept="image/*" />
+        </label>
+        <label class="field">
+          <span>Subtitles (.vtt or .srt)</span>
+          <input type="file" name="subtitleFile" accept=".vtt,.srt" />
+        </label>
+        <label class="field">
+          <span>Subtitle label</span>
+          <input type="text" name="subtitleLabel" placeholder="English" />
+        </label>
+        <button type="submit" class="primary">Create watch room</button>
+      </form>
+      <div id="status" class="status hidden"></div>
+      <div id="room-link" class="room-link hidden">
+        <p>Share this link with your friend:</p>
+        <a id="room-anchor" href="#" target="_blank" rel="noreferrer"></a>
+      </div>
+    </section>
+  </main>
+  <script src="/index.js"></script>
+</body>
+</html>
