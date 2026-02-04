@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch Together</title>
+  <link rel="stylesheet" href="/public/styles.css" />
+</head>
+<body>
+  <main class="landing">
+    <section class="card">
+      <h1>Watch Together</h1>
+      <p class="subtitle">Upload a video, add cover art, and invite a friend for a perfectly synced watch party.</p>
+      <form class="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+        <label>
+          Video file (MP4/WebM)
+          <input type="file" name="video" accept="video/mp4,video/webm" />
+        </label>
+        <label>
+          Or video URL
+          <input type="url" name="videoUrl" placeholder="https://example.com/video.mp4" />
+        </label>
+        <label>
+          Art / Poster image
+          <input type="file" name="art" accept="image/*" />
+        </label>
+        <label>
+          Or art URL
+          <input type="url" name="artUrl" placeholder="https://example.com/poster.jpg" />
+        </label>
+        <label>
+          Subtitles (.vtt or .srt)
+          <input type="file" name="subtitle" accept=".vtt,.srt" />
+        </label>
+        <button type="submit">Create room</button>
+      </form>
+      <div class="helper">
+        <p>Tip: If you use external URLs, make sure they support cross-origin access.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
